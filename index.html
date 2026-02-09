@@ -1,0 +1,1343 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MarkDaniel • Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="img/photo_6287511240498595635_x.jpg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Background -->
+    <div class="bgfx" aria-hidden="true">
+      <div class="grid"></div>
+      <div class="blob a" id="blobA"></div>
+      <div class="blob b" id="blobB"></div>
+      <div class="blob c" id="blobC"></div>
+      <div class="noise"></div>
+    </div>
+
+    <!-- MOBILE DRAWER -->
+    <div class="mobile-drawer" id="drawer" aria-hidden="true">
+      <div class="drawer-backdrop" id="drawerBackdrop"></div>
+      <div
+        class="drawer-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Navigation"
+      >
+        <div class="drawer-head">
+          <div class="brand" style="min-width: auto">
+            <div class="logo" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 3.5c4.7 0 8.5 3.8 8.5 8.5S16.7 20.5 12 20.5 3.5 16.7 3.5 12 7.3 3.5 12 3.5Z"
+                  stroke="rgba(255,255,255,.9)"
+                  stroke-width="1.6"
+                />
+                <path
+                  d="M12 7.2c2.65 0 4.8 2.15 4.8 4.8S14.65 16.8 12 16.8 7.2 14.65 7.2 12 9.35 7.2 12 7.2Z"
+                  stroke="rgba(255,255,255,.7)"
+                  stroke-width="1.6"
+                />
+                <path
+                  d="M9.4 12h5.2"
+                  stroke="rgba(255,255,255,.9)"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <span>MarkDaniel</span>
+          </div>
+
+          <button
+            class="menu-btn"
+            id="closeDrawer"
+            aria-label="Close menu"
+            style="display: grid"
+          >
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M6 6l12 12"
+                stroke="rgba(255,255,255,.9)"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M18 6L6 18"
+                stroke="rgba(255,255,255,.9)"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="drawer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#works">Works</a>
+          <a href="#skills">Skills</a>
+          <a href="#feedback">Feedback</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAV -->
+    <div class="nav container">
+      <div class="nav-inner">
+        <div class="brand">
+          <div class="logo" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 3.5c4.7 0 8.5 3.8 8.5 8.5S16.7 20.5 12 20.5 3.5 16.7 3.5 12 7.3 3.5 12 3.5Z"
+                stroke="rgba(255,255,255,.9)"
+                stroke-width="1.6"
+              />
+              <path
+                d="M12 7.2c2.65 0 4.8 2.15 4.8 4.8S14.65 16.8 12 16.8 7.2 14.65 7.2 12 9.35 7.2 12 7.2Z"
+                stroke="rgba(255,255,255,.7)"
+                stroke-width="1.6"
+              />
+              <path
+                d="M9.4 12h5.2"
+                stroke="rgba(255,255,255,.9)"
+                stroke-width="1.6"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <span>Mark<span style="color: #9253ff">Dev</span></span>
+        </div>
+
+        <nav class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#works">Works</a>
+          <a href="#skills">Skills</a>
+          <a href="#feedback">Feedback</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a class="pill" href="#contact" title="Email">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
+              <path
+                d="M4.5 6.5h15v11h-15v-11Z"
+                stroke="rgba(255,255,255,.85)"
+                stroke-width="1.6"
+              />
+              <path
+                d="m5.5 7.5 6.5 5 6.5-5"
+                stroke="rgba(255,255,255,.85)"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            Email
+          </a>
+
+          <button class="menu-btn" id="openDrawer" aria-label="Open menu">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M6 7h12"
+                stroke="rgba(255,255,255,.9)"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M6 12h12"
+                stroke="rgba(255,255,255,.9)"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M6 17h12"
+                stroke="rgba(255,255,255,.9)"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+
+          <!-- ✅ REMOVED "My Works" button (was causing overflow on mobile) -->
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section id="home" class="hero container">
+      <div class="hero-grid">
+        <!-- PROFILE (right on desktop, top on mobile) -->
+        <aside class="portrait reveal">
+          <div class="profile-box">
+            <div class="avatar-wrap">
+              <img
+                class="avatar-img"
+                src="img/photo_6287511240498595635_x.jpg"
+                alt="Mark Daniel profile"
+              />
+            </div>
+          </div>
+
+          <div class="mini">
+            <span class="chip">atchoyalindayu@gmail.com</span>
+            <span class="chip">Isabela PH</span>
+          </div>
+        </aside>
+
+        <div class="hero-card reveal">
+          <div class="kicker">
+            <span class="kdot"></span> I am Mark Daniel Alindayu
+          </div>
+
+          <h1 class="h1">
+            Web Developer <span class="vio">+</span><br />
+            Iot Developer
+          </h1>
+
+          <p class="lead">
+            I build IoT-powered systems and web dashboards—focused on real-time
+            data, hardware integration, and reliable performance for real-world
+            applications.
+          </p>
+
+          <div class="hero-actions">
+            <!-- DOWNLOAD CV -->
+            <a
+              class="btn"
+              href="img/Mark-Daniel-Alindayu_CV_resume-fix.docx"
+              download
+            >
+              Download CV
+              <!-- Download icon -->
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
+                <path
+                  d="M12 3v10"
+                  stroke="rgba(255,255,255,.95)"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M8 11l4 4 4-4"
+                  stroke="rgba(255,255,255,.95)"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5 20h14"
+                  stroke="rgba(255,255,255,.85)"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </a>
+
+            <!-- CONTACT DETAILS (same as before) -->
+            <a class="pill" href="#contact">
+              Contact Details
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
+                <path
+                  d="M4.5 6.5h15v11h-15v-11Z"
+                  stroke="rgba(255,255,255,.85)"
+                  stroke-width="1.6"
+                />
+                <path
+                  d="m5.5 7.5 6.5 5 6.5-5"
+                  stroke="rgba(255,255,255,.85)"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="iconbar" aria-label="Social links">
+            <!-- GitHub -->
+            <a
+              class="iconbtn"
+              href="https://github.com/Deyn-iel"
+              target="_blank"
+              title="GitHub"
+            >
+              <svg viewBox="0 0 24 24" fill="rgba(255,255,255,.9)">
+                <path
+                  d="M12 2a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.14-1.1-1.45-1.1-1.45-.9-.62.07-.61.07-.61 1 .07 1.52 1.03 1.52 1.03.9 1.52 2.36 1.08 2.94.83.1-.65.35-1.08.64-1.33-2.22-.25-4.56-1.1-4.56-4.92 0-1.08.38-1.96 1.02-2.65-.1-.25-.45-1.27.1-2.65 0 0 .83-.27 2.73 1.02a9.4 9.4 0 0 1 5 0c1.9-1.3 2.73-1.02 2.73-1.02.55 1.38.2 2.4.1 2.65.64.7 1.02 1.57 1.02 2.65 0 3.83-2.35 4.66-4.58 4.9.36.32.68.93.68 1.88v2.78c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"
+                />
+              </svg>
+            </a>
+            <!-- LinkedIn -->
+            <a
+              class="iconbtn"
+              href="https://linkedin.com/in/markdanielalindayu"
+              target="_blank"
+              title="LinkedIn"
+            >
+              <svg viewBox="0 0 24 24" fill="rgba(255,255,255,.9)">
+                <path
+                  d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.6h.05c.53-1 1.83-2.05 3.75-2.05C21 8.55 22 10.7 22 14.1V21h-4v-6.1c0-1.45-.03-3.3-2.02-3.3-2.02 0-2.33 1.57-2.33 3.2V21h-4V9Z"
+                />
+              </svg>
+            </a>
+
+            <a
+              class="iconbtn"
+              href="mailto:atchoyalindayu@gmail.com"
+              title="Email"
+            >
+              <svg viewBox="0 0 24 24" fill="rgba(255,255,255,.9)">
+                <path
+                  d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6Zm2 .5V7l8 5 8-5v-.5L12 11 4 6.5Z"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <!-- <div class="stats">
+            <div class="stat"><b>5</b><span>Project completed</span></div>
+            <div class="stat"><b>-</b><span>Happy clients</span></div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+      <div class="section-head reveal">
+        <h2>About Me</h2>
+        <p class="sub">
+          A quick intro about who I am, what I do, and what you can expect when
+          working with me.
+        </p>
+        <div class="mark"></div>
+      </div>
+
+      <div class="about reveal">
+        <div class="card">
+          <h3
+            style="
+              margin: 0;
+              font-family: &quot;Sora&quot;, system-ui;
+              font-size: 14px;
+            "
+          >
+            Hello! I'm Mark Daniel
+          </h3>
+          <p>
+            I'm a Web Developer with a strong focus on IoT development. I work
+            on building smart systems that connect hardware, sensors, and
+            cloud-based dashboards to deliver real-time data and automation.
+          </p>
+          <p>
+            I develop real-world IoT and web-based systems focused on
+            automation, safety, and environmental monitoring. My work includes
+            poultry environment monitoring, smart waste detection, and
+            sensor-based alert systems for infrastructure safety, all supported
+            by real-time dashboards and data visualization.
+          </p>
+
+          <p>
+            I also worked as a Web Developer at Pinnacle Global Franchising
+            Group Inc., where I built and maintained responsive systems such as
+            examination, ticketing, application processing, and supplies
+            management platforms. In addition, I designed an AI chatbot concept
+            for Isabela State University – Cauayan, focusing on system flow and
+            user-friendly interaction.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3
+            style="
+              margin: 0;
+              font-family: &quot;Sora&quot;, system-ui;
+              font-size: 14px;
+            "
+          >
+            Quick Info
+          </h3>
+          <div class="about-grid">
+            <div class="info">
+              <small>Full Name</small>
+              <b>Mark Daniel Alindayu</b>
+            </div>
+            <div class="info">
+              <small>Role</small>
+              <b>Web Dev + Iot</b>
+            </div>
+            <div class="info">
+              <small>Email</small>
+              <b>atchoyalindayu@gmail.com</b>
+            </div>
+            <div class="info">
+              <small>Location</small>
+              <b>Isabela, PH</b>
+            </div>
+          </div>
+
+          <div
+            style="margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap"
+          >
+            <a class="btn" href="#services">My Services</a>
+            <a class="pill" href="#works">View Works</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section container">
+      <div class="section-head reveal">
+        <h2>My IoT & Web Services</h2>
+        <p class="sub">
+          I build practical IoT solutions and modern web systems—focused on
+          real-time monitoring, automation, safety alerts, and responsive design
+          for real-world use.
+        </p>
+        <div class="mark"></div>
+      </div>
+
+      <div class="acc reveal" id="accordion">
+        <!-- 01 -->
+        <div class="acc-item open">
+          <button class="acc-btn" type="button">
+            <div class="acc-left">
+              <div class="num">01</div>
+              <div>
+                <div class="acc-title">
+                  Web Systems Development (Pinnacle Global Franchising Group
+                  Inc.)
+                </div>
+                <div class="acc-desc">
+                  Enterprise web systems with clean UI and responsive design.
+                </div>
+              </div>
+            </div>
+            <div class="acc-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 5v14"
+                  stroke="rgba(255,255,255,.9)"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M5 12h14"
+                  stroke="rgba(255,255,255,.9)"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              I worked as a Web Developer at Pinnacle Global Franchising Group
+              Inc., where I designed and developed multiple internal web systems
+              including an online examination system, ticketing system,
+              application process system, and supplies management system. All
+              systems were built with responsive layouts, clean UI, and reliable
+              performance for daily operations.
+
+              <div class="acc-pills">
+                <span class="tag">Exam System</span>
+                <span class="tag">Ticketing</span>
+                <span class="tag">Application Process</span>
+                <span class="tag">Supplies System</span>
+                <span class="tag">Responsive UI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="acc-item">
+          <button class="acc-btn" type="button">
+            <div class="acc-left">
+              <div class="num">02</div>
+              <div>
+                <div class="acc-title">IoT Monitoring & Dashboards</div>
+                <div class="acc-desc">
+                  Real-time sensor data visualization and system monitoring.
+                </div>
+              </div>
+            </div>
+            <div class="acc-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 5v14"
+                  stroke="rgba(255,255,255,.9)"
+                  stroke-width="1.8"
+                />
+                <path
+                  d="M5 12h14"
+                  stroke="rgba(255,255,255,.9)"
+                  stroke-width="1.8"
+                />
+              </svg>
+            </div>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              I build IoT dashboards that display live sensor readings such as
+              temperature, humidity, and device status. These dashboards are
+              designed for easy monitoring, data analysis, and decision-making,
+              including systems like poultry environment monitoring.
+
+              <div class="acc-pills">
+                <span class="tag">Real-time Data</span>
+                <span class="tag">IoT Dashboard</span>
+                <span class="tag">Charts</span>
+                <span class="tag">Monitoring</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <div class="acc-item">
+          <button class="acc-btn" type="button">
+            <div class="acc-left">
+              <div class="num">03</div>
+              <div>
+                <div class="acc-title">Automation & Smart Device Systems</div>
+                <div class="acc-desc">
+                  Sensor-based automation and smart control systems.
+                </div>
+              </div>
+            </div>
+            <div class="acc-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 5v14"
+                  stroke="rgba(255,255,255,.9)"
+                  stroke-width="1.8"
+                />
+                <path
+                  d="M5 12h14"
+                  stroke="rgba(255,255,255,.9)"
+                  stroke-width="1.8"
+                />
+              </svg>
+            </div>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              I develop automation projects such as an automated trash can
+              capable of detecting biodegradable and non-biodegradable waste.
+              These systems are designed to trigger actions automatically using
+              sensors for efficient and smart operation.
+
+              <div class="acc-pills">
+                <span class="tag">Automation</span>
+                <span class="tag">Sensors</span>
+                <span class="tag">Smart Devices</span>
+                <span class="tag">Detection</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04 -->
+        <div class="acc-item">
+          <button class="acc-btn" type="button">
+            <div class="acc-left">
+              <div class="num">04</div>
+              <div>
+                <div class="acc-title">Alert Systems & Safety Monitoring</div>
+                <div class="acc-desc">
+                  Early-warning systems for safety and risk prevention.
+                </div>
+              </div>
+            </div>
+            <div class="acc-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 5v14"
+                  stroke="rgba(255,255,255,.9)"
+                  stroke-width="1.8"
+                />
+                <path
+                  d="M5 12h14"
+                  stroke="rgba(255,255,255,.9)"
+                  stroke-width="1.8"
+                />
+              </svg>
+            </div>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              I built alert systems such as STAPLE sensor technology for
+              detecting post-leaning issues and early warning signs that may
+              lead to transformer explosions. These systems help improve safety
+              through monitoring and alert notifications.
+
+              <div class="acc-pills">
+                <span class="tag">Safety Alerts</span>
+                <span class="tag">STAPLE Sensors</span>
+                <span class="tag">Preventive System</span>
+                <span class="tag">Monitoring</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 05 -->
+        <div class="acc-item">
+          <button class="acc-btn" type="button">
+            <div class="acc-left">
+              <div class="num">05</div>
+              <div>
+                <div class="acc-title">Web Development for IoT Interfaces</div>
+                <div class="acc-desc">
+                  Responsive web apps for device control and data access.
+                </div>
+              </div>
+            </div>
+            <div class="acc-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 5v14"
+                  stroke="rgba(255,255,255,.9)"
+                  stroke-width="1.8"
+                />
+                <path
+                  d="M5 12h14"
+                  stroke="rgba(255,255,255,.9)"
+                  stroke-width="1.8"
+                />
+              </svg>
+            </div>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              I design and develop responsive web interfaces for IoT systems,
+              including control panels, admin dashboards, and monitoring pages
+              that work seamlessly across desktop and mobile devices.
+
+              <div class="acc-pills">
+                <span class="tag">Responsive</span>
+                <span class="tag">Control Panel</span>
+                <span class="tag">Web App</span>
+                <span class="tag">Clean UI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 06 -->
+        <div class="acc-item">
+          <button class="acc-btn" type="button">
+            <div class="acc-left">
+              <div class="num">06</div>
+              <div>
+                <div class="acc-title">AI Chatbot System (ISU – Cauayan)</div>
+                <div class="acc-desc">
+                  Concept-based AI chatbot for academic assistance.
+                </div>
+              </div>
+            </div>
+            <div class="acc-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 5v14"
+                  stroke="rgba(255,255,255,.9)"
+                  stroke-width="1.8"
+                />
+                <path
+                  d="M5 12h14"
+                  stroke="rgba(255,255,255,.9)"
+                  stroke-width="1.8"
+                />
+              </svg>
+            </div>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              I designed an AI chatbot concept for Isabela State University –
+              Cauayan to assist students with academic information, campus
+              inquiries, and FAQs. The project focuses on conversation flow,
+              logic design, and usability, but is not yet fully implemented.
+
+              <div class="acc-pills">
+                <span class="tag">AI Concept</span>
+                <span class="tag">Chatbot</span>
+                <span class="tag">Academic System</span>
+                <span class="tag">Not Implemented</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKS -->
+    <section id="works" class="section container">
+      <div class="section-head reveal">
+        <h2>My Recent Works</h2>
+        <p class="sub">
+          A selection of real-world IoT projects and web-based systems focused
+          on automation, monitoring, and practical business solutions.
+        </p>
+        <div class="mark"></div>
+      </div>
+
+      <div class="tabs reveal" id="tabs">
+        <button class="tab active" data-filter="all" type="button">All</button>
+        <button class="tab" data-filter="iot" type="button">IoT</button>
+        <button class="tab" data-filter="web" type="button">Web Systems</button>
+      </div>
+
+      <div class="works reveal" id="worksGrid">
+        <!-- IOT PROJECT -->
+        <article class="work" data-cat="iot">
+          <!-- <div class="thumb"></div> -->
+          <div class="work-body">
+            <h3 class="work-title">Poultry Environment Monitoring System</h3>
+            <p class="work-sub">
+              An IoT-based system for monitoring temperature, humidity, and
+              environmental conditions affecting poultry health, displayed
+              through a real-time web dashboard.
+            </p>
+            <div class="work-meta">
+              <span class="tag">IoT</span>
+              <span class="tag">Sensors</span>
+              <span class="tag">Dashboard</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- IOT AUTOMATION -->
+        <article class="work" data-cat="iot">
+          <div class="work-body">
+            <h3 class="work-title">Smart Automated Trash Can</h3>
+            <p class="work-sub">
+              An automated waste management system that detects biodegradable
+              and non-biodegradable materials using sensors and triggers the
+              correct disposal mechanism.
+            </p>
+            <div class="work-meta">
+              <span class="tag">Automation</span>
+              <span class="tag">Detection</span>
+              <span class="tag">IoT</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- SAFETY SYSTEM -->
+        <article class="work" data-cat="iot">
+          <div class="work-body">
+            <h3 class="work-title">STAPLE Sensor Safety Alert System</h3>
+            <p class="work-sub">
+              A sensor-based alert system designed to detect post-leaning and
+              early warning signs of potential transformer failures, integrated
+              with monitoring and alert notifications.
+            </p>
+            <div class="work-meta">
+              <span class="tag">Safety</span>
+              <span class="tag">Alert System</span>
+              <span class="tag">Sensors</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- COMPANY WEB SYSTEMS -->
+        <article class="work" data-cat="web">
+          <div class="work-body">
+            <h3 class="work-title">Enterprise Web Systems – Pinnacle Global</h3>
+            <p class="work-sub">
+              Built and maintained multiple internal systems including online
+              examination, ticketing, application processing, and supplies
+              management for Pinnacle Global Franchising Group Inc.
+            </p>
+            <div class="work-meta">
+              <span class="tag">Web App</span>
+              <span class="tag">Enterprise</span>
+              <span class="tag">Responsive</span>
+            </div>
+
+            <!-- VISIT COMPANY -->
+            <a
+              href="https://app.pinnacleglobalfranchising.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="pill"
+              style="margin-top: 12px; display: inline-flex"
+            >
+              Visit Pinnacle
+            </a>
+          </div>
+        </article>
+
+        <!-- AI CONCEPT -->
+        <article class="work" data-cat="web">
+          <div class="work-body">
+            <h3 class="work-title">AI Chatbot Concept – ISU Cauayan</h3>
+            <p class="work-sub">
+              A concept-based AI chatbot designed to assist students with
+              academic information and campus inquiries. Focused on conversation
+              flow and system logic (not yet implemented).
+            </p>
+            <div class="work-meta">
+              <span class="tag">AI Concept</span>
+              <span class="tag">Chatbot</span>
+              <span class="tag">Academic</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section container">
+      <div class="section-head reveal">
+        <h2>My Technical Skills</h2>
+        <p class="sub">
+          Tools and technologies I use to build web systems, dashboards, and
+          real-world IoT applications.
+        </p>
+        <div class="mark"></div>
+      </div>
+
+      <div class="skills reveal">
+        <!-- FRONTEND -->
+        <h3 class="skills-title">Frontend</h3>
+        <div class="skill-grid logos">
+          <div class="skill logo-card">
+            <i class="devicon-javascript-plain colored"></i>
+            <b>JavaScript</b>
+          </div>
+
+          <div class="skill logo-card">
+            <i class="devicon-vuejs-plain colored"></i>
+            <b>Vue</b>
+          </div>
+
+          <div class="skill logo-card">
+            <i class="devicon-react-original colored"></i>
+            <b>React</b>
+          </div>
+
+          <div class="skill logo-card">
+            <i class="devicon-angularjs-plain colored"></i>
+            <b>Angular</b>
+          </div>
+
+          <div class="skill logo-card">
+            <i class="devicon-tailwindcss-original colored"></i>
+            <b>Tailwind CSS</b>
+          </div>
+
+          <div class="skill logo-card">
+            <i class="devicon-bootstrap-plain colored"></i>
+            <b>Bootstrap</b>
+          </div>
+
+          <div class="skill logo-card">
+            <i class="devicon-html5-plain colored"></i>
+            <b>HTML</b>
+          </div>
+
+          <div class="skill logo-card">
+            <i class="devicon-css3-plain colored"></i>
+            <b>CSS</b>
+          </div>
+
+          <div class="skill logo-card">
+            <i class="devicon-responsive-plain"></i>
+            <b>Responsive Design</b>
+          </div>
+        </div>
+
+        <!-- BACKEND -->
+        <h3 class="skills-title" style="margin-top: 22px">Backend</h3>
+        <div class="skill-grid logos">
+          <div class="skill logo-card">
+            <i class="devicon-php-plain colored"></i>
+            <b>PHP</b>
+          </div>
+
+          <div class="skill logo-card">
+            <i class="devicon-laravel-original colored"></i>
+            <b>Laravel</b>
+          </div>
+
+          <div class="skill logo-card">
+            <i class="devicon-mysql-plain colored"></i>
+            <b>MySQL</b>
+          </div>
+
+          <div class="skill logo-card">
+            <i class="devicon-firebase-plain colored"></i>
+            <b>Firebase</b>
+          </div>
+        </div>
+
+        <!-- IOT -->
+        <h3 class="skills-title" style="margin-top: 22px">IoT</h3>
+        <div class="skill-grid logos">
+          <div class="skill logo-card">
+            <i class="devicon-arduino-plain colored"></i>
+            <b>Arduino</b>
+          </div>
+
+          <div class="skill logo-card">
+            <i class="devicon-cplusplus-plain colored"></i>
+            <b>C++</b>
+          </div>
+        </div>
+        <!-- TOOLS & WORKFLOW -->
+        <h3 class="skills-title" style="margin-top: 22px">Tools & Workflow</h3>
+        <div class="skill-grid logos">
+          <div class="skill logo-card">
+            <i class="devicon-github-original"></i>
+            <b>GitHub</b>
+          </div>
+
+          <div class="skill logo-card">
+            <i class="devicon-vscode-plain colored"></i>
+            <b>VS Code</b>
+          </div>
+
+          <div class="skill logo-card">
+            <i class="devicon-git-plain colored"></i>
+            <b>Git</b>
+          </div>
+
+          <div class="skill logo-card">
+            <svg viewBox="0 0 24 24" width="34" height="34" fill="none">
+              <path
+                d="M12 3a5 5 0 0 1 4.9 4H17a4 4 0 0 1 0 8h-.1A5 5 0 1 1 12 3Z"
+                stroke="rgba(255,255,255,.9)"
+                stroke-width="1.6"
+              />
+            </svg>
+            <b>ChatGPT</b>
+          </div>
+
+          <div class="skill logo-card">
+            <i class="devicon-vercel-original"></i>
+            <b>Vercel</b>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section container">
+      <div class="section-head reveal">
+        <h2 id="feedback">Feedback & Experience</h2>
+        <p class="sub">
+          Feedback from academic projects, competitions, and professional
+          company experience.
+        </p>
+        <div class="mark"></div>
+      </div>
+
+      <div class="cards reveal">
+        <!-- GRADE 10 – STAPLE (CHAMPION) -->
+        <div class="tcard">
+          <div class="t-top">
+            <div class="t-user">
+              <div class="t-ava">
+                <!-- Trophy icon -->
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M7 4h10v3c0 3-2.2 5-5 5s-5-2-5-5V4Z"
+                    stroke="rgba(255,255,255,.9)"
+                    stroke-width="1.6"
+                  />
+                  <path
+                    d="M9 12v3h6v-3"
+                    stroke="rgba(255,255,255,.7)"
+                    stroke-width="1.6"
+                  />
+                  <path
+                    d="M8 18h8"
+                    stroke="rgba(255,255,255,.7)"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M4 6c0 2 1.5 4 3 4M20 6c0 2-1.5 4-3 4"
+                    stroke="rgba(255,255,255,.6)"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div>
+                <b>Grade 10 Students</b>
+                <small>STAPLE Sensor Project (Champion)</small>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+          </div>
+          <p>
+            “The STAPLE sensor project became our contest entry, and we won as
+            Champion. The system helped us understand real-world safety
+            monitoring and contributed greatly to our success in the subject.”
+          </p>
+        </div>
+
+        <!-- COLLEGE – POULTRY & TRASHCAN -->
+        <div class="tcard">
+          <div class="t-top">
+            <div class="t-user">
+              <div class="t-ava">
+                <!-- IoT / Leaf icon -->
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 3c5 2 8 6 8 10a8 8 0 1 1-16 0c0-4 3-8 8-10Z"
+                    stroke="rgba(255,255,255,.9)"
+                    stroke-width="1.6"
+                  />
+                  <path
+                    d="M12 7v10"
+                    stroke="rgba(255,255,255,.6)"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div>
+                <b>College Students</b>
+                <small>IoT Monitoring Projects</small>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+          </div>
+          <p>
+            “The poultry environment monitoring system and automated trash can
+            were effective and easy to use. The dashboard and automation helped
+            us complete our project requirements and pass the subject.”
+          </p>
+        </div>
+
+        <!-- COMPANY – PINNACLE GLOBAL -->
+        <div class="tcard">
+          <div class="t-top">
+            <div class="t-user">
+              <div class="t-ava">
+                <!-- Briefcase / Company icon -->
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 7h16v10H4V7Z"
+                    stroke="rgba(255,255,255,.9)"
+                    stroke-width="1.6"
+                  />
+                  <path
+                    d="M9 7V5h6v2"
+                    stroke="rgba(255,255,255,.7)"
+                    stroke-width="1.6"
+                  />
+                  <path
+                    d="M4 11h16"
+                    stroke="rgba(255,255,255,.6)"
+                    stroke-width="1.6"
+                  />
+                </svg>
+              </div>
+              <div>
+                <b>Pinnacle Global Franchising Group Inc.</b>
+                <small>Web Development Team</small>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+          </div>
+          <p>
+            “We are satisfied with the output and functionality of the web
+            systems developed. The work showed clean design, responsiveness, and
+            reliability. Keep it up.”
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION (NEW DESIGN) -->
+    <section id="education" class="section container">
+      <div class="section-head reveal">
+        <h2>Education</h2>
+        <p class="sub">
+          A quick overview of my academic journey—highlighting skills and focus
+          areas.
+        </p>
+        <div class="mark"></div>
+      </div>
+
+      <div class="edu reveal">
+        <div class="edu-head">
+          <h3>Academic Background</h3>
+        </div>
+
+        <div class="edu-body">
+          <div class="edu-grid">
+            <!-- LEFT: TIMELINE -->
+            <div class="edu-timeline">
+              <!-- COLLEGE -->
+              <div class="edu-item">
+                <div class="edu-top">
+                  <div>
+                    <p class="edu-title">
+                      College Graduate • BS Information Technology
+                    </p>
+                    <div class="edu-meta">
+                      <b style="color: rgba(255, 255, 255, 0.9)"
+                        >Isabela State University – Cauayan Campus</b
+                      ><br />
+                      Focus: Web Development, IoT Systems, Dashboards
+                    </div>
+                  </div>
+                  <span class="edu-year">2021 – 2025</span>
+                </div>
+
+                <div class="edu-pills">
+                  <span class="edu-pill">Capstone / IoT</span>
+                  <span class="edu-pill">Web Systems</span>
+                  <span class="edu-pill">Database</span>
+                  <span class="edu-pill">UI/UX</span>
+                </div>
+              </div>
+
+              <!-- SENIOR HIGH (2 years) -->
+              <div class="edu-item">
+                <div class="edu-top">
+                  <div>
+                    <p class="edu-title">
+                      Senior High School • ICT (Information Communication
+                      Technology)
+                    </p>
+                    <div class="edu-meta">
+                      <b style="color: rgba(255, 255, 255, 0.9)"
+                        >Cauayan City National High School - Main </b
+                      ><br />
+                      Improved technical skills through projects &
+                      specialization
+                    </div>
+                  </div>
+                  <span class="edu-year">2019 – 2021</span>
+                </div>
+
+                <div class="edu-pills">
+                  <span class="edu-pill">Strand Focus</span>
+                  <span class="edu-pill">Research / Project</span>
+                  <span class="edu-pill">Presentation</span>
+                </div>
+              </div>
+
+              <!-- JUNIOR HIGH (4 years) -->
+              <!-- JUNIOR HIGH (4 years) -->
+              <div class="edu-item">
+                <div class="edu-top">
+                  <div>
+                    <p class="edu-title">Junior High School • Graduate</p>
+                    <div class="edu-meta">
+                      <b style="color: rgba(255, 255, 255, 0.9)"
+                        >Reina Mercedes Vocational and Industrial School </b
+                      ><br />
+                      Built foundations in academics, electronics, and early
+                      interest in technology
+                    </div>
+                  </div>
+                  <span class="edu-year">2015 – 2019</span>
+                </div>
+
+                <div class="edu-pills">
+                  <span class="edu-pill">Basic Electronics</span>
+                  <span class="edu-pill">Circuits</span>
+                  <span class="edu-pill">Hands-on Activities</span>
+                  <span class="edu-pill">Foundations</span>
+                </div>
+              </div>
+
+              <!-- ELEMENTARY -->
+              <div class="edu-item">
+                <div class="edu-top">
+                  <div>
+                    <p class="edu-title">Elementary • Graduate</p>
+                    <div class="edu-meta">
+                      <b style="color: rgba(255, 255, 255, 0.9)"
+                        >Reina Mercedes Central School</b
+                      ><br />
+                      Early academic foundation
+                    </div>
+                  </div>
+                  <span class="edu-year">2009 – 2015</span>
+                </div>
+
+                <div class="edu-pills">
+                  <span class="edu-pill">Foundation</span>
+                  <span class="edu-pill">Discipline</span>
+                  <span class="edu-pill">Learning Skills</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT: SUMMARY CARD -->
+            <aside class="edu-summary">
+              <h4>Highlights</h4>
+              <p>
+                My education helped me build strong foundations in programming
+                and problem-solving, leading to practical project development in
+                IoT and modern web systems.
+              </p>
+
+              <div class="edu-metrics">
+                <div class="edu-metric">
+                  <b>Web Dev</b>
+                  <span>Systems + dashboards</span>
+                </div>
+                <div class="edu-metric">
+                  <b>IoT</b>
+                  <span>Sensors + automation</span>
+                </div>
+                <div class="edu-metric">
+                  <b>Projects</b>
+                  <span>Academic + real-world</span>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT (DETAILS ONLY) -->
+    <section id="contact" class="section container">
+      <div class="section-head reveal">
+        <h2>Contact</h2>
+        <div class="mark"></div>
+      </div>
+
+      <div class="contact reveal">
+        <div class="contact-inner">
+          <div class="contact-main">
+            <h3>Let’s work together!</h3>
+            <p>
+              If you need a portfolio, landing page, or website redesign—message
+              me via email or social links. I’m open for freelance / projects.
+            </p>
+
+            <div class="contact-list">
+              <div class="citem">
+                <div>
+                  <small>Email</small>
+                  <b>atchoyalindayu@gmail.com</b>
+                </div>
+                <span class="badge">Primary</span>
+              </div>
+              <div class="citem">
+                <div>
+                  <small>Phone</small>
+                  <b>+63 993 725 9373</b>
+                </div>
+                <span class="badge">Number</span>
+              </div>
+              <div class="citem">
+                <div>
+                  <small>Location</small>
+                  <b>Isabela, PH</b>
+                </div>
+                <span class="badge">GMT+8</span>
+              </div>
+            </div>
+
+            <div
+              style="
+                margin-top: 14px;
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+              "
+            >
+              <a class="btn" href="#works">See Works</a>
+              <a class="pill" href="#home">Back to top</a>
+            </div>
+          </div>
+
+          <aside class="contact-side">
+            <h3
+              style="
+                margin: 0;
+                font-family: &quot;Sora&quot;, system-ui;
+                font-size: 14px;
+              "
+            >
+              Quick Links
+            </h3>
+            <p style="margin: 10px 0 0">
+              Update your social links (GitHub, LinkedIn, etc.) when ready.
+            </p>
+
+            <div class="contact-list" style="margin-top: 12px">
+              <div class="citem">
+                <div>
+                  <small>GitHub</small>
+                  <b>github.com/Deyn-iel</b>
+                </div>
+                <span class="badge">Link</span>
+              </div>
+              <div class="citem">
+                <div>
+                  <small>LinkedIn</small>
+                  <b>linkedin.com/in/markdanielalindayu</b>
+                </div>
+                <span class="badge">Link</span>
+              </div>
+              <div class="citem">
+                <div>
+                  <small>Portfolio</small>
+                  <b>mark-daniel-portfolio.vercel.app</b>
+                </div>
+                <span class="badge">Domain</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <footer class="container">
+      <div class="footline"></div>
+      <div
+        style="
+          display: flex;
+          gap: 10px;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+        "
+      >
+        <span style="opacity: 0.9"><b>MarkDaniel</b> • Portfolio</span>
+        <span>•</span>
+        <span>2026</span>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
