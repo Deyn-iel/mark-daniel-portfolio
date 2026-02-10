@@ -7,4 +7,5 @@ export default defineConfig({
       minify: true,
     }),
   ],
+  base: "/",
 });
