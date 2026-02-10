@@ -48,7 +48,6 @@ body {
 }
 
 body {
-   -webkit-transform: translateZ(0);
   margin: 0;
   font-family:
     "Manrope",
@@ -158,6 +157,7 @@ textarea {
   top: 14px;
   z-index: 50;
   margin-top: 14px;
+  transform: translateZ(0); /* ✅ helps when scrolled */
 }
 
 .nav-inner {
@@ -171,6 +171,7 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(14px);
   box-shadow: var(--shadow);
+  transform: translateZ(0); /* ✅ helps when scrolled */
 }
 
 .brand {
@@ -336,13 +337,18 @@ textarea {
 .mobile-drawer {
   position: fixed;
   inset: 0;
-  z-index: 999;
+  z-index: 9999;            /* ✅ mas mataas kaysa nav */
+  transform: translateZ(0); /* ✅ iOS stacking fix */
 
-  /* ✅ instead of display none/block */
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.28s ease;
 }
+.drawer-backdrop,
+.drawer-panel {
+  transform: translateZ(0); /* ✅ iOS stacking fix */
+}
+
 
 .mobile-drawer.open {
   opacity: 1;
