@@ -48,6 +48,7 @@ body {
 }
 
 body {
+   -webkit-transform: translateZ(0);
   margin: 0;
   font-family:
     "Manrope",
@@ -1695,17 +1696,27 @@ footer {
 }
 
 /* ===== iOS Safari Fix ===== */
+/* ===== iOS Safari HARD FIX ===== */
 @supports (-webkit-touch-callout: none) {
-  /* lessen blur globally */
+  body {
+    background: #05040a !important;
+  }
+
+  * {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
   .nav-inner,
   .hero-card,
   .portrait,
   .card,
   .contact,
   .edu,
-  .skills {
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    background: rgba(10, 8, 19, 0.92) !important;
+  .skills,
+  .work,
+  .tcard {
+    background: rgba(10, 8, 19, 0.95) !important;
   }
 }
+
