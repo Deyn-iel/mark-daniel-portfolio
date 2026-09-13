@@ -9,6 +9,7 @@ import stapleImage from '../img/staple.jfif?url';
 import pinnacleImage from '../img/pinnacle.png';
 import careersImage from '../img/careers.png';
 import aisuImage from '../img/aisu.png';
+import consultationImage from '../img/consultation-dashboard.png';
 
 // Let Vite bundle the resume so the download also works after deployment.
 document.querySelector('a[download]').href = new URL('../img/Mark-Daniel-Alindayu_CV_resume-fix.docx', import.meta.url).href;
@@ -54,6 +55,7 @@ document.querySelectorAll('.section-head').forEach((head, index) => {
 document.querySelector('.portrait').insertAdjacentHTML('beforeend', '<div class="portrait-caption"><span>WEB + IoT DEVELOPMENT</span><span aria-hidden="true">↗</span></div>');
 document.querySelector('.hero-card').insertAdjacentHTML('beforeend', '<a class="about-link" href="#about">A little about me <span aria-hidden="true">↓</span></a>');
 const projectImages = {
+  consultation: [consultationImage, 'Illustrative student–faculty consultation dashboard with appointments and faculty availability'],
   poultry: [poultryImage, 'Poultry monitoring prototype with sensors, a cooling fan, and a laptop'],
   autotrashcan: [trashImage, 'Automated trash can prototype with separate biodegradable and non-biodegradable bins'],
   staple: [stapleImage, 'STAPLE safety alert prototype with its wired sensor circuit inside an enclosure'],
@@ -61,6 +63,25 @@ const projectImages = {
   careers: [careersImage, 'Pinnacle Global careers portal homepage'],
   aisu: [aisuImage, 'Chat AISU concept interface with campus information prompts'],
 };
+
+const certificates = document.createElement('div');
+certificates.className = 'certificates';
+certificates.innerHTML = '<div class="certificates-heading"><h3>Certificates &amp; learning</h3><p>A few milestones along the way. Open any certificate to view it in a new tab.</p></div><div class="certificate-grid"></div>';
+[
+  ['accenture.jpg', 'Accenture Technology Academy', 'Back End and Front End Development · 2025'],
+  ['google-play-publishing.png', 'Google Play Store Publishing', 'HostScripter Web Services · 2024'],
+  ['hour-of-code-2024.png', 'The Hour of Code', 'Code.org · 2024'],
+].forEach(([src, title, detail]) => {
+  const link = document.createElement('a');
+  link.className = 'certificate-card';
+  link.href = `${import.meta.env.BASE_URL}certificates/${src}`;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  link.setAttribute('aria-label', `${title} certificate — opens in a new tab`);
+  link.innerHTML = `<div class="certificate-details"><h4>${title}</h4><p>${detail}</p><span>View certificate <span aria-hidden="true">↗</span></span></div>`;
+  certificates.querySelector('.certificate-grid').append(link);
+});
+document.getElementById('education').append(certificates);
 document.querySelectorAll('.work').forEach(work => {
   const asset = projectImages[work.dataset.project];
   if (!asset) return;
