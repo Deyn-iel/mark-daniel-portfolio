@@ -23,6 +23,7 @@
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <!-- Background -->
     <div class="bgfx" aria-hidden="true">
       <div class="grid"></div>
@@ -196,14 +197,17 @@
             <div class="avatar-wrap">
               <img
                 class="avatar-img"
-                src="img/photo_6287511240498595635_x.jpg"
+                src="img/profile-enhanced.png"
+                width="1254"
+                height="1254"
+                fetchpriority="high"
                 alt="Mark Daniel profile"
               />
             </div>
           </div>
 
           <div class="mini">
-            <span class="chip">atchoyalindayu@gmail.com</span>
+            <span class="chip">markdanielalindayu16@gmail.com</span>
             <span class="chip">Isabela PH</span>
           </div>
         </aside>
@@ -215,7 +219,7 @@
 
           <h1 class="h1">
             Web Developer <span class="vio">+</span><br />
-            Iot Developer
+            <span class="role-accent">Iot Developer</span>
           </h1>
 
           <p class="lead">
@@ -306,7 +310,7 @@
 
             <a
               class="iconbtn"
-              href="mailto:atchoyalindayu@gmail.com"
+              href="mailto:markdanielalindayu16@gmail.com"
               title="Email"
             >
               <svg viewBox="0 0 24 24" fill="rgba(255,255,255,.9)">
@@ -391,7 +395,7 @@
             </div>
             <div class="info">
               <small>Email</small>
-              <b>atchoyalindayu@gmail.com</b>
+              <b>markdanielalindayu16@gmail.com</b>
             </div>
             <div class="info">
               <small>Location</small>
@@ -456,18 +460,31 @@
           </button>
           <div class="acc-panel">
             <div class="acc-panel-inner">
-              I worked as a Web Developer at Pinnacle Global Franchising Group
-              Inc., where I designed and developed multiple internal web systems
-              including an online examination system, ticketing system,
-              application process system, and supplies management system. All
-              systems were built with responsive layouts, clean UI, and reliable
-              performance for daily operations.
+              <p>
+                At Pinnacle Global Franchising Group Inc., I designed and
+                developed web-based systems for online examinations, ticketing,
+                application processing, and supplies management, with responsive
+                layouts and user-friendly interfaces for daily operations.
+              </p>
+              <p>
+                I also developed a Careers System for job postings, applicant
+                submissions, and recruitment workflows; an Attendance and
+                Payroll System for attendance monitoring and payroll-related
+                processing; and company and business portals tailored to
+                operational needs. I contributed to the development of a
+                Franchise Flow System for managing and monitoring franchise
+                processes and transactions.
+              </p>
 
               <div class="acc-pills">
                 <span class="tag">Exam System</span>
                 <span class="tag">Ticketing</span>
                 <span class="tag">Application Process</span>
                 <span class="tag">Supplies System</span>
+                <span class="tag">Careers System</span>
+                <span class="tag">Attendance &amp; Payroll</span>
+                <span class="tag">Company &amp; Business Portals</span>
+                <span class="tag">Franchise Flow</span>
                 <span class="tag">Responsive UI</span>
               </div>
             </div>
@@ -714,7 +731,7 @@
 
       <div class="works reveal" id="worksGrid">
         <!-- IOT PROJECT -->
-        <article class="work" data-cat="iot">
+        <article class="work" data-cat="iot" data-project="poultry">
           <!-- <div class="thumb"></div> -->
           <div class="work-body">
             <h3 class="work-title">Poultry Environment Monitoring System</h3>
@@ -732,7 +749,7 @@
         </article>
 
         <!-- IOT AUTOMATION -->
-        <article class="work" data-cat="iot">
+        <article class="work" data-cat="iot" data-project="autotrashcan">
           <div class="work-body">
             <h3 class="work-title">Smart Automated Trash Can</h3>
             <p class="work-sub">
@@ -749,7 +766,7 @@
         </article>
 
         <!-- SAFETY SYSTEM -->
-        <article class="work" data-cat="iot">
+        <article class="work" data-cat="iot" data-project="staple">
           <div class="work-body">
             <h3 class="work-title">STAPLE Sensor Safety Alert System</h3>
             <p class="work-sub">
@@ -766,7 +783,7 @@
         </article>
 
         <!-- COMPANY WEB SYSTEMS -->
-        <article class="work" data-cat="web">
+        <article class="work" data-cat="web" data-project="pinnacle">
           <div class="work-body">
             <h3 class="work-title">Enterprise Web Systems – Pinnacle Global</h3>
             <p class="work-sub">
@@ -780,21 +797,49 @@
               <span class="tag">Responsive</span>
             </div>
 
-            <!-- VISIT COMPANY -->
-            <a
-              href="https://app.pinnacleglobalfranchising.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="pill"
-              style="margin-top: 12px; display: inline-flex"
-            >
-              Visit Pinnacle
-            </a>
+            <div class="project-links">
+              <a
+                href="https://pinnacleglobalfranchising.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pill"
+              >
+                Visit Pinnacle <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CAREERS SYSTEM -->
+        <article class="work" data-cat="web" data-project="careers">
+          <div class="work-body">
+            <h3 class="work-title">Careers System – Pinnacle Global</h3>
+            <p class="work-sub">
+              Designed and developed a recruitment portal for Pinnacle Global
+              Franchising Group Inc. to manage job postings, applicant
+              submissions, and recruitment workflows through a responsive,
+              user-friendly interface.
+            </p>
+            <div class="work-meta">
+              <span class="tag">Careers Portal</span>
+              <span class="tag">Recruitment</span>
+              <span class="tag">Responsive</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://careers.pinnacleglobalfranchising.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pill"
+              >
+                Visit Careers <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
         </article>
 
         <!-- AI CONCEPT -->
-        <article class="work" data-cat="web">
+        <article class="work" data-cat="web" data-project="aisu">
           <div class="work-body">
             <h3 class="work-title">AI Chatbot Concept – ISU Cauayan</h3>
             <p class="work-sub">
@@ -948,9 +993,9 @@
     </section>
 
     <!-- TESTIMONIALS -->
-    <section class="section container">
+    <section id="feedback" class="section container">
       <div class="section-head reveal">
-        <h2 id="feedback">Feedback & Experience</h2>
+        <h2>Feedback & Experience</h2>
         <p class="sub">
           Feedback from academic projects, competitions, and professional
           company experience.
@@ -1246,7 +1291,7 @@
               <div class="citem">
                 <div>
                   <small>Email</small>
-                  <b>atchoyalindayu@gmail.com</b>
+                  <b>markdanielalindayu16@gmail.com</b>
                 </div>
                 <span class="badge">Primary</span>
               </div>
@@ -1273,10 +1318,7 @@
                 gap: 10px;
                 flex-wrap: wrap;
               "
-            >
-              <a class="btn" href="#works">See Works</a>
-              <a class="pill" href="#home">Back to top</a>
-            </div>
+            ></div>
           </div>
 
           <aside class="contact-side">
@@ -1290,7 +1332,7 @@
               Quick Links
             </h3>
             <p style="margin: 10px 0 0">
-              Update your social links (GitHub, LinkedIn, etc.) when ready.
+              Find me online or get in touch through the links below.
             </p>
 
             <div class="contact-list" style="margin-top: 12px">
@@ -1338,6 +1380,6 @@
       </div>
     </footer>
 
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/pages.js"></script>
   </body>
 </html>
